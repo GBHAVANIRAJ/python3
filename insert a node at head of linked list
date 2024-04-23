@@ -1,0 +1,12 @@
+def insertNodeAtHead(llist, data):
+    newBlock=SinglyLinkedListNode(data)
+    if llist==None:
+        return newBlock
+    newBlock.next=llist
+    return newBlock
+   
+    cur=llist
+    while cur.next!=None:
+        cur=cur.next
+    cur.next=newBlock
+    return llist
